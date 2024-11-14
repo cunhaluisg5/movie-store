@@ -1,16 +1,15 @@
 <template>
     <v-carousel
-      v-model="indiceAtual"
+      height="400"
+      show-arrows
       cycle
       interval="5000"
-      show-arrows
-      hide-delimiters
     >
       <v-carousel-item
         v-for="(imagem, indice) in imagens"
         :key="indice"
       >
-        <v-img :src="imagem" class="d-flex justify-center align-center" />
+        <v-img :src="imagem" />
       </v-carousel-item>
     </v-carousel>
 </template>
@@ -23,15 +22,14 @@
   export default {
     name: "Destaque",
     data() {
-    return {
-      indiceAtual: 0,
-      imagens: [
-        imagem01,
-        imagem02,
-        imagem03,
-      ],
-    };
-  },
+      return {
+        imagens: [
+          imagem01,
+          imagem02,
+          imagem03,
+        ],
+      };
+    },
   }
 </script>
 
